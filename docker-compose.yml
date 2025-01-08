@@ -6,7 +6,7 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - WEBHOOK_URL=https://automation.deepgaze.xyz/
+      - WEBHOOK_URL= # <--- Dominio o Subdominio
       - GENERIC_TIMEZONE=Europe/Madrid
       - TZ=Europe/Madrid
       - N8N_QUEUE_TYPE=redis
@@ -21,7 +21,7 @@ services:
       - N8N_SMTP_PORT= # <--- Credencial de correo
       - N8N_SMTP_USER= # <--- Credencial de correo
       - N8N_SMTP_PASS= # <--- Credencial de correo
-      - N8N_SMTP_SENDER= # <--- Credencial de correo
+      - N8N_SMTP_SENDER= # <--- Credencial de correo - colocar entre ""
       - N8N_SMTP_SSL= # <--- Credencial de correo
       - N8N_PROTOCOL=https
       - DB_TYPE=postgresdb 
