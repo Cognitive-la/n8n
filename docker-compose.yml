@@ -4,7 +4,7 @@ services:
     restart: always
     command:
       - "--api=true"
-      - "--api.insecure=false"
+      - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
@@ -81,13 +81,6 @@ services:
       - POSTGRES_DB=n8n
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
-
-  redis:
-    image: redis:latest
-    container_name: n8n-redis
-    restart: unless-stopped
-    volumes:
-      - ./redis_storage:/data
 
 
 volumes:
